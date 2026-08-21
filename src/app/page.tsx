@@ -53,19 +53,21 @@ export default function DevaliaSafariPage() {
               className="object-cover"
             />
             <div className="hero-overlay absolute inset-0" aria-hidden />
-            <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8 md:p-10 lg:p-12 text-white">
-              <div className="flex max-w-[1140px] flex-col gap-3 sm:gap-4">
-                <p className="eyebrow hero-eyebrow">Destination · Gir, Gujarat</p>
-                <h1 className="hero-title">Devalia Safari Park</h1>
-                <p className="hero-description body-17">
-                  A closer way to experience the wildlife of Gir, with open landscapes, diverse wildlife and memorable safari moments.
-                </p>
-                <div className="hero-meta flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-semibold sm:text-[16px]">
-                  <span>6 Min Read</span>
-                  <span aria-hidden>•</span>
-                  <span>Published 15 August 2026</span>
-                  <span aria-hidden>•</span>
-                  <span>Prakash Mehta</span>
+            <div className="absolute inset-x-0 bottom-0 z-10 text-white">
+              <div className="container-1240 hero-copy-wrap">
+                <div className="flex max-w-[1240px] flex-col gap-3 sm:gap-4">
+                  <p className="eyebrow hero-eyebrow">Destination · Gir, Gujarat</p>
+                  <h1 className="hero-title">Devalia Safari Park</h1>
+                  <p className="hero-description body-17">
+                    A closer way to experience the wildlife of Gir, with open landscapes, diverse wildlife and memorable safari moments.
+                  </p>
+                  <div className="hero-meta flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-semibold sm:text-[16px]">
+                    <span>6 Min Read</span>
+                    <span aria-hidden>•</span>
+                    <span>Published 15 August 2026</span>
+                    <span aria-hidden>•</span>
+                    <span>Prakash Mehta</span>
+                  </div>
                 </div>
               </div>
             </div>
