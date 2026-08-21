@@ -481,10 +481,27 @@ export default function DevaliaSafariPage() {
             </div>
             <a
               href="#"
-              className="hidden sm:inline-flex items-center font-bold gap-2 py-3 px-5 rounded-full border border-[var(--color-hairline)] bg-white text-[13px]"
-              style={{ color: "var(--color-ink-strong)" }}
+              className="hidden sm:inline-flex items-center justify-center w-[248px] h-[52px] gap-[10px] rounded-[100px] border border-[#1D4C3A] px-[24px] py-[16px] opacity-100 transition-colors hover:bg-[#1D4C3A] hover:text-white group"
+              style={{ color: "#1D4C3A" }}
             >
-              Destination Guides <span aria-hidden>&rarr;</span>
+              <span className="uppercase text-[14px] font-medium tracking-[0.03em]">
+                DESTINATION GUIDES
+              </span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="transition-transform group-hover:translate-x-1"
+                aria-hidden
+              >
+                <path d="M4 12h16" />
+                <path d="M13 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
 
