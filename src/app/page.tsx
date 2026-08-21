@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
+import GuideCard from "@/components/GuideCard";
 
 function Eyebrow({
   children,
@@ -110,6 +111,12 @@ export default function DevaliaSafariPage() {
             <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 order-2 md:order-1">
               <Eyebrow>02 — At a glance</Eyebrow>
               <h2 className="heading-28">What to Expect at Devalia</h2>
+              <p
+                className="max-w-[660px] text-[18px] font-[450] leading-[32px] tracking-[0%] text-[#5F645F]"
+                style={{ fontFamily: "var(--font-body), sans-serif" }}
+              >
+                Devalia is best experienced as part of a broader Gir trip rather than as a replacement for exploring the region.
+              </p>
               <ul className="flex list-none flex-col gap-3 p-0 sm:gap-4 md:gap-[18px]">
                 <li className="body-17">
                   <strong className="font-bold" style={{ color: "#3b3f3a" }}>
@@ -182,9 +189,12 @@ export default function DevaliaSafariPage() {
                 observing animals, understanding their surroundings and learning
                 more about the wildlife conservation story of the region.
               </p>
-              <p className="body-17 font-bold" style={{ color: "#3b3f3a" }}>
-                Best suited for: First-time visitors · Families · Wildlife
-                enthusiasts · Photography lovers
+              <p className="body-17">
+                <strong className="font-bold" style={{ color: "#3b3f3a" }}>
+                  Best suited for:
+                </strong>{" "}
+                First-time visitors · Families · Wildlife enthusiasts ·
+                Photography lovers
               </p>
             </div>
           </div>
@@ -347,7 +357,7 @@ export default function DevaliaSafariPage() {
             </p>
           </div>
 
-          <div className="cards-2 mt-8 sm:mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 lg:gap-y-[48px] lg:gap-x-[80px] mt-8 sm:mt-10 lg:mt-12">
             {[
               {
                 title: "Plan Ahead",
@@ -366,14 +376,19 @@ export default function DevaliaSafariPage() {
                 body: "Stay within designated areas, follow staff instructions and respect wildlife.",
               },
             ].map((item) => (
-              <div key={item.title}>
+              <div key={item.title} className="flex flex-col gap-2 sm:gap-2.5">
                 <h3
-                  className="font-bold text-[16px] sm:text-[17px] leading-[24px] sm:leading-[26px] mb-1.5"
+                  className="font-bold text-[18px] md:text-[20px] leading-[1.3]"
                   style={{ color: "var(--color-ink)" }}
                 >
                   {item.title}
                 </h3>
-                <p className="body-17">{item.body}</p>
+                <p 
+                  className="text-[15px] md:text-[16px] leading-[24px] md:leading-[26px]"
+                  style={{ color: "#5F645F" }}
+                >
+                  {item.body}
+                </p>
               </div>
             ))}
           </div>
@@ -395,7 +410,7 @@ export default function DevaliaSafariPage() {
             </p>
           </div>
 
-          <div className="cards-2 mt-8 sm:mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 lg:gap-y-[48px] lg:gap-x-[80px] mt-8 sm:mt-10 lg:mt-12">
             {[
               { title: "Morning", body: "Wildlife experience around Gir" },
               {
@@ -411,14 +426,19 @@ export default function DevaliaSafariPage() {
                 body: "Return to your stay or explore Sasan Gir",
               },
             ].map((item) => (
-              <div key={item.title}>
+              <div key={item.title} className="flex flex-col gap-2 sm:gap-2.5">
                 <h3
-                  className="font-bold text-[16px] sm:text-[17px] leading-[24px] sm:leading-[26px] mb-1.5"
+                  className="font-bold text-[18px] md:text-[20px] leading-[1.3]"
                   style={{ color: "var(--color-ink)" }}
                 >
                   {item.title}
                 </h3>
-                <p className="body-17">{item.body}</p>
+                <p 
+                  className="text-[15px] md:text-[16px] leading-[24px] md:leading-[26px]"
+                  style={{ color: "#5F645F" }}
+                >
+                  {item.body}
+                </p>
               </div>
             ))}
           </div>
@@ -475,100 +495,38 @@ export default function DevaliaSafariPage() {
                 tag: "Planning",
                 title: "Best Time to Visit Gir: A Month-by-Month Guide",
                 body: "When lions are most active, how the forest changes across seasons, and when to plan your safari window.",
+                readTime: "6 min read",
               },
               {
                 img: "/images/card-thali.jpg",
                 tag: "Food",
                 title: "What to Eat Around Gir: Kathiyawadi Food Trail",
                 body: "From rustic Kathiyawadi thalis to farm-fresh Kesar mangoes, a guide to eating well near the forest.",
+                readTime: "6 min read",
               },
               {
                 img: "/images/card-lion.jpg",
                 tag: "Itinerary",
                 title: "3-Day Gir Itinerary: Safari, Devalia & Slow Mornings",
                 body: "A relaxed plan balancing official safari time, the Devalia enclosure and unhurried resort mornings.",
+                readTime: "6 min read",
               },
               {
                 img: "/images/3310a2598459d2808c36023a11fc838fc38044bf.png",
                 tag: "Itinerary",
                 title: "3-Day Gir Itinerary: Safari, Devalia & Slow Mornings",
                 body: "A relaxed plan balancing official safari time, the Devalia enclosure and unhurried resort mornings.",
+                readTime: "6 min read",
               },
             ].map((card) => (
-              <article
+              <GuideCard
                 key={card.title + card.tag + card.img}
-                className="related-card border border-[var(--color-hairline)] overflow-hidden bg-white flex flex-col"
-              >
-                <div className="related-card-image relative w-full">
-                  <Image
-                    src={card.img}
-                    alt={card.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                  <span
-                    className="absolute top-3 left-3 bg-white/95 rounded-full px-2.5 py-1 text-[11px] font-semibold"
-                    style={{ color: "var(--color-ink-strong)" }}
-                  >
-                    {card.tag}
-                  </span>
-                </div>
-                <div className="related-card-content flex flex-col flex-1">
-                  <h3
-                    className="related-card-title"
-                    style={{
-                      color: "var(--color-ink-strong)",
-                    }}
-                  >
-                    {card.title}
-                  </h3>
-                  <p
-                    className="related-card-body"
-                    style={{ color: "var(--color-body)" }}
-                  >
-                    {card.body}
-                  </p>
-                  <div
-                    className="flex items-center justify-between mt-auto pt-3 sm:pt-3.5 border-t border-[var(--color-hairline)]"
-                  >
-                    <span
-                      className="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px]"
-                      style={{ color: "#7c7e79" }}
-                    >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        aria-hidden
-                      >
-                        <circle
-                          cx="7"
-                          cy="7"
-                          r="6"
-                          stroke="#9a9c97"
-                          strokeWidth="1.2"
-                        />
-                        <path
-                          d="M7 3.8V7l2.1 1.3"
-                          stroke="#9a9c97"
-                          strokeWidth="1.2"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      6 min read
-                    </span>
-                    <a
-                      href="#"
-                      className="inline-flex items-center font-bold gap-1.5 text-[12px] sm:text-[13px]"
-                      style={{ color: "var(--color-link)" }}
-                    >
-                      Read <span aria-hidden>&rarr;</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
+                tag={card.tag}
+                title={card.title}
+                description={card.body}
+                readTime={card.readTime}
+                image={card.img}
+              />
             ))}
           </div>
         </div>
