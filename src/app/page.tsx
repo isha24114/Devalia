@@ -481,7 +481,7 @@ export default function DevaliaSafariPage() {
             </div>
             <a
               href="#"
-              className="hidden sm:inline-flex items-center justify-center w-[248px] h-[52px] gap-[10px] rounded-[100px] border border-[#1D4C3A] px-[24px] py-[16px] opacity-100 transition-colors hover:bg-[#1D4C3A] hover:text-white group"
+              className="hidden sm:inline-flex items-center justify-center w-[248px] h-[52px] gap-[10px] rounded-[100px] border border-[#1D4C3A] px-[24px] py-[16px] opacity-100 group"
               style={{ color: "#1D4C3A" }}
             >
               <span className="uppercase text-[14px] font-medium tracking-[0.03em]">

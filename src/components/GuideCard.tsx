@@ -52,29 +52,12 @@ export default function GuideCard({
         </div>
 
         {/* Footer row */}
-        <div className="flex items-center justify-between text-xs text-[#5F645F]">
-          <span className="inline-flex items-center gap-1.5 text-[#5F645F]">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#5F645F"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden
-            >
-              <circle cx="12" cy="12" r="9" />
-              <path d="M12 7v5l3 3" />
-            </svg>
-            {readTime}
-          </span>
+        <div className="flex items-center text-xs text-[#5F645F]">
           <a
             href="#"
             className="font-bold text-[#1D4C3A] inline-flex items-center gap-1.5 hover:underline"
           >
-            <span>Read</span>
+            <span>Read more</span>
             <svg
               width="14"
               height="14"
